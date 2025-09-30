@@ -7,12 +7,25 @@ import java.awt.event.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class Uitest {
+	@Parameters("Browser")
+	@Test
+	public void startbrowser(String browserName) throws InterruptedException, AWTException {
+		System.out.println("parameter value is:"+browserName);
+		WebDriver driver=null;
+		if(browserName.contains("Chrome"))
+		{
+			driver=new ChromeDriver();
+		}
+		else if(browserName.contains("Edge"))
+		{
+			driver=new EdgeDriver();
+		}
 
-	public static void main(String[] args) throws InterruptedException, AWTException {
-		// TODO Auto-generated method stub
-		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.saucedemo.com/");
 		driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("standard_user");
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("secret_sauce");

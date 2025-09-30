@@ -47,7 +47,11 @@
     <scope>test</scope>
 </dependency>
 
-
+<dependency>
+  <groupId>io.github.bonigarcia</groupId>
+  <artifactId>webdrivermanager</artifactId>
+  <version>5.9.2</version>
+</dependency>
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
     <groupId>com.aventstack</groupId>
@@ -64,7 +68,7 @@
     <scope>test</scope>
 </dependency>
 
-   
+
    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 <dependency>
     <groupId>org.slf4j</groupId>
@@ -84,6 +88,8 @@
       <suiteXmlFiles>
         <suiteXmlFile>testng.xml</suiteXmlFile>
       </suiteXmlFiles>
+      
+      
     </configuration>
   </plugin>
 </plugins>
