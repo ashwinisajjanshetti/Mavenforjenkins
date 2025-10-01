@@ -37,6 +37,7 @@ public class Uitest {
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(3000);
 		System.out.println("Popup closed");
+		
 		driver.close(); 
 
 	}
